@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+        
+        <a-assets>
+            <a-asset-item id="door_o" src="model/obj//Wood_door/Door.obj"></a-asset-item>
+            <a-asset-item id="door_m" src="model/obj/Wood_door/Door.mtl"></a-asset-item>
+            
+            <img id="ny_s" src="img/ny_scene.jpg">
+            
+            <img id="plane_cabbin_f" src="img/airplane_cabbin_front.jpg">
+            
+            <img id="plane_cabbin_b" src="img/airplane_cabbin_back.jpg">
+
+            <img id="plane_carpet" src="img/plane_carpet.jpg">
+            
+            <img id="plane_ceiling" src="img/airplane_cabbin_front.jpg">
+            
+            <img id="plane_cabin360" src="img/airplane_cabin.jpeg">
+            
+            <img id="plane_seat_backview" src="img/plane_seat_back.jpg">
+            
+        </a-assets>
+            
+<!-- scene entities -->         
+            
+    <!-- camera & environment -->        
+    <a-camera user-height="1.6"; position="5 3 -10" rotation="0 180 0">
+        <a-cursor></a-cursor>    
+    </a-camera>
+    <a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.5722448147213711" visible=""></a-entity>
+    <a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.572; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity>
+    <a-sky radius="300" theta-length="110" class="environment" material="shader: skyshader; sunPosition: -0.10389385923870163 0.9444896294427422 0.31168157771610494" geometry="" scale="-1.5 1 1.5"></a-sky>
+    
+    <!-- Object placement -->       
+        <!-- airplane cabin -->
+            
+        <a-sky src="#plane_cabin360" position="4.74114 7.16582 -18.72381" material="" geometry="radius: 15" scale="1 1 1" rotation="0 90 0"></a-sky>
+                    
+        <a-plane src="#plane_carpet" position="5 -0.6 -25" height="40" width="40" rotation="-90 0 0"></a-plane>
+        <!-- cabin light above door -->
+        <a-light type="spot" position="4.5 10.23898 -27" rotation="-90 0 0" color="#f2ff22" angle="30" light=""></a-light>
+        <!-- Door -->
+        <a-obj-model src="#door_o" mtl="#door_m" position="4.2 -0.64 -27.95" scale="2.5 2.5 2.5" rotation="0 0 0"></a-obj-model>
+        <!-- right circular pannel -->       
+        <a-circle color="#fff" radius="6.5" position="6.445 -1.23449 -28.19127" theta-length="180" rotation="180 -90 90" scale="0.9 0.59 1" material="" geometry=""></a-circle>
+        <!-- left circular pannel -->        
+        <a-circle color="#fff" radius="6.5" position="2 -0.534 -28.25104" theta-length="180" rotation="0 -90 90" scale="0.79 0.5 1" material="" geometry=""></a-circle>
+
+        <!-- Door image -->
+        <a-image src="#ny_s" position="4.25 1.8 -29" rotation="14 0 0" scale="4 5.5 1"></a-image>
+            
+        <a-image src="#plane_seat_backview" position="4.78149 2.72603 -18.62354" rotation="" scale="30 30 1" material="opacity: 0.5" geometry=""></a-image>
+            
+        <!-- portal -->
+        <a-link href="nyc_entrance.html" title="NYC" image="#ny_s" geometry="primitive: circle; segments: 64" material="shader: portal; pano: file:///D:/K's%20Art%20work/Portfolio/VR_exhibition_portfolio/img/ny_scene.jpg; side: double" link="" scale="1 2.34 1" rotation="14 0 0" position="5.06655 1.95048 -28.61981"><a-entity text="color: white; align: center; font: kelsonsans; value: NYC; width: 5" position="0 1.5 0" rotation="0 180 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" visible="false"></a-entity></a-link>
+       
+        
+        </a-scene>    
+    </body>
+</html>

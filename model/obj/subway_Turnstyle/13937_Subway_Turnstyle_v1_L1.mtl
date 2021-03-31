@@ -1,0 +1,28 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 20.03.2012 09:30:02
+
+newmtl Subway_Turnstyle_detail
+	Ns 48.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Subway_Turnstyle_display.jpg
+	map_Kd Subway_Turnstyle_display.jpg
+
+newmtl Subway_Turnstyle_body
+	Ns 65.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.6314 0.6471 0.6627
+	Kd 0.6314 0.6471 0.6627
+	Ks 0.3027 0.3059 0.3106
+	Ke 0.0000 0.0000 0.0000

@@ -1,0 +1,431 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+        
+        <a-assets>
+<!-- 3D Models -->
+            <a-asset-item id="sm_city_o" src="model/obj/city_small/cityblock.obj"></a-asset-item>
+            <a-asset-item id="sm_city_m" src="model/obj/city_small/cityblock.mtl"></a-asset-item>
+            
+            <a-asset-item id="brdg_o" src="model/obj/bridge/brije.obj"></a-asset-item>
+            <a-asset-item id="brdg_m" src="model/obj/bridge/brije.mtl"></a-asset-item>
+            
+            <a-asset-item id="brcde_o" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.obj"></a-asset-item>
+            <a-asset-item id="brcde_m" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.mtl"></a-asset-item>
+            
+            <a-asset-item id="freeway_sign_o" src="model/obj/highway_sign/hignway_sign3.obj"></a-asset-item>
+            <a-asset-item id="freeway_sign_m" src="model/obj/highway_sign/hignway_sign3.mtl"></a-asset-item>
+            
+            <a-asset-item id="sign_plate_o" src="model/obj/sign_plate/sign_plate.obj"></a-asset-item>
+            <a-asset-item id="sign_plate_m" src="model/obj/sign_plate/sign_plate.mtl"></a-asset-item>
+            
+<!-- 3D model subway set-->
+            <a-asset-item id="subway_hall2_o" src="model/obj/subway_hall2/subway_hall.obj"></a-asset-item>
+            <a-asset-item id="subway_hall2_m" src="model/obj/subway_hall2/subway_hall.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_bench_o" src="model/obj/subway_bench/bench.obj"></a-asset-item>
+            <a-asset-item id="subway_bench_m" src="model/obj/subway_bench/bench.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_bench2_o" src="model/obj/subway_bench2/bench2.obj"></a-asset-item>
+            <a-asset-item id="subway_bench2_m" src="model/obj/subway_bench2/bench2.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_stairs_o" src="model/obj/subway_stairs/subway-stairs.obj"></a-asset-item>
+            <a-asset-item id="subway_stairs_m" src="model/obj/subway_stairs/subway-stairs.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_ticket_o" src="model/obj/subway_ticket_machine/-subway-ticket-machine.obj"></a-asset-item>
+            <a-asset-item id="subway_ticket_m" src="model/obj/subway_ticket_machine/-subway-ticket-machine.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_trash_o" src="model/obj/subway_trash/subway_trash.obj"></a-asset-item>
+            <a-asset-item id="subway_trash_m" src="model/obj/subway_trash/subway_trash.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_wall_o" src="model/obj/subway_wall/subway-wall.obj"></a-asset-item>
+            <a-asset-item id="subway_wall_m" src="model/obj/subway_wall/subway-wall.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_turn_o" src="model/obj/subway_Turnstyle/13937_Subway_Turnstyle_v1_L1.obj"></a-asset-item>
+            <a-asset-item id="subway_turn_m" src="model/obj/subway_Turnstyle/13937_Subway_Turnstyle_v1_L1.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_fence_o" src="model/obj/subway_fence/subway_fence.obj"></a-asset-item>
+            <a-asset-item id="subway_fence_m" src="model/obj/subway_fence/subway_fence.mtl"></a-asset-item>
+            
+            <a-asset-item id="ceiling_light_o" src="model/obj/ceiling_light/ceiling_light.obj"></a-asset-item>
+            <a-asset-item id="ceiling_light_m" src="model/obj/ceiling_light/ceiling_light.mtl"></a-asset-item>
+            
+            <a-asset-item id="citymap_o" src="model/obj/manhattan_3Dmap/Lower%20Manhattan.obj"></a-asset-item>
+            <a-asset-item id="citymap_m" src="model/obj/manhattan_3Dmap/Lower%20Manhattan.mtl"></a-asset-item>
+            
+            <a-asset-item id="2door_o" src="model/obj/Double_door/2door.obj"></a-asset-item>
+            <a-asset-item id="2door_m" src="model/obj/Double_door/2door.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_frame_o" src="model/obj/subway_frame/subway_picture_frame.obj"></a-asset-item>
+            <a-asset-item id="subway_frame_m" src="model/obj/subway_frame/subway_picture_frame.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_chain_pole_o" src="model/obj/stop_chain_pole/Stop_chain_pole.obj"></a-asset-item>
+            <a-asset-item id="subway_chain_pole_m" src="model/obj/stop_chain_pole/Stop_chain_pole.mtl"></a-asset-item>
+            
+        <!-- City landmark -->
+            <a-asset-item id="chrysler_building_o" src="model/obj/Landmark/chrysler_building/13942_Chrysler_Building_V1_l1.obj"></a-asset-item>
+            <a-asset-item id="chrysler_building_m" src="model/obj/Landmark/chrysler_building/13942_Chrysler_Building_V1_l1.mtl"></a-asset-item>
+            
+            <a-asset-item id="Freedom_tower_o" src="model/obj/Landmark/Freedom_tower/13939_New_York_City_Freedom_tower_v1_l3.obj"></a-asset-item>
+            <a-asset-item id="Freedom_tower_m" src="model/obj/Landmark/Freedom_tower/13939_New_York_City_Freedom_tower_v1_l3.mtl"></a-asset-item>
+            
+            <a-asset-item id="hirise_o" src="model/obj/Landmark/hirise/manhattan_apt.obj"></a-asset-item>
+            <a-asset-item id="hirise_m" src="model/obj/Landmark/hirise/manhattan_apt.mtl"></a-asset-item>
+            
+            <a-asset-item id="nybs_o" src="model/obj/Landmark/nybs/13940_New_York_City_Brownstone_Building_v1_l2.obj"></a-asset-item>
+            <a-asset-item id="nybs_m" src="model/obj/Landmark/nybs/13940_New_York_City_Brownstone_Building_v1_l2.mtl"></a-asset-item>
+            
+<!-- Images -->            
+            <img id="ny_sign" src="img/ny_sign.png">
+
+            <img id="concrete" src="img/concrete.png"> 
+            
+            <img id="no_u_turn" src="img/u_turn_sign.png">
+            
+            <img id="oneway_l" src="img/one_way_left.png">
+            
+            <img id="subway_closed" src="img/subway_close_sign.png">
+            
+            <img id="sky1" src="img/wall_street_equirectengular.jpg">
+            
+            <img id="subway_direction_sign2" src="img/subway_right_arrow_sign2.png">
+            
+            <img id="subway_direction_sign3" src="img/tile_sign_edit.png">
+            
+            <img id="platform" src="img/platform.jpg">
+            
+        <!-- art work -->
+            <img id="skinny_love_sketch" src="img/artwork/skinny_love_sketch.jpg">
+            <img id="skinny_love" src="img/artwork/skinny_love.jpg">
+            
+            <img id="resume_sketch" src="img/artwork/resume_sketch.jpg">
+            <img id="resume_design" src="img/artwork/Custom_resume_design.jpg">
+            
+            <img id="practice1" src="img/artwork/practice1.jpg">
+            <img id="practice2" src="img/artwork/practice2.jpg">
+            <img id="practice3" src="img/artwork/icecream_truck_sketch.jpg">
+            <img id="practice4" src="img/artwork/brain_jar.jpg">
+            <img id="practice5" src="img/artwork/gassy_boy.jpg">
+            
+            <img id="poster_ori" src="img/artwork/poster_redesign_ori.jpg">
+            <img id="poster_sketch1" src="img/artwork/poster_redesign1_sketch.jpg">
+            <img id="poster_sketch2" src="img/artwork/poster_redesign2_sketch.jpg">
+            <img id="poster_sketch3" src="img/artwork/poster_redesign3_sketch.jpg">
+            <img id="poster1" src="img/artwork/poster_redesign1.jpg">
+            <img id="poster2" src="img/artwork/poster_redesign2.jpg">
+            <img id="poster3" src="img/artwork/poster_redesign3.jpg">
+            
+            <img id="logo_design1" src="img/artwork/Design_agency_logo.png">
+            <img id="logo_design2" src="img/artwork/prime_lumber_business_card1.jpg">
+            <img id="logo_design3" src="img/artwork/prime_lumber_business_card2.jpg">
+            <img id="logo_design4" src="img/artwork/prime_lumber_store_sign.jpg">
+            <img id="logo_design5" src="img/artwork/prime_lumber_office_plate.jpg">
+            
+            <img id="skeleton1" src="img/artwork/skeleton_sketch1.jpg">
+            <img id="skeleton2" src="img/artwork/skeleton_sketch2.jpg">
+            <img id="skeleton3" src="img/artwork/skeleton_sketch3.jpg">
+            
+            <img id="muscle1" src="img/artwork/muscle_sketch1.jpg">
+            <img id="muscle2" src="img/artwork/muscle_sketch2.jpg">
+            
+            <img id="hulk" src="img/artwork/hulk_sketch.jpg">
+            <img id="hercules" src="img/artwork/hercules_sketch.jpg">
+            <img id="pole_stand" src="img/artwork/figure_sketch.jpg">
+        </a-assets>
+            
+<!-- scene entities -->
+    <a-camera user-height="1.6"; position="6 3 -38" rotation="0 0 0">
+        <a-cursor></a-cursor>    
+    </a-camera>
+            
+    <a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.5722448147213711" visible=""></a-entity>
+    <a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.572; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity>
+    <a-sky radius="300" theta-length="110" class="environment" material="shader: skyshader; sunPosition: -0.10389385923870163 0.9444896294427422 0.31168157771610494" geometry="" scale="-1.5 1 1.5"></a-sky>
+<!-- entrance to NYC -->
+        <a-obj-model src="#brdg_o" mtl="#brdg_m" position="-2.4 -20 -10" scale="5 10 15" rotation="0 90 0"></a-obj-model>
+    <!-- landmark -->
+        <a-obj-model src="#chrysler_building_o" mtl="#chrysler_building_m" position="32.09803 10.95082 -83.29731" scale="0.005 0.005 0.005" rotation="-90 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#Freedom_tower_o" mtl="#Freedom_tower_m" position="14.12361 128.4947 -113.97913" scale="0.005 0.005 0.0035" rotation="-90 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#nybs_o" mtl="#nybs_m" position="-27.84585 -1.397 -56.98315" scale="0.03 0.03 0.03" rotation="-90 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#hirise_o" mtl="#hirise_m" position="-31.16601 -19.57588 -112.17705" scale="" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+            
+        
+            
+            
+        <!-- middle sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="2.11886 -1.5632 -34.26077" scale="1.5 1.5 1.5" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <!-- left sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="17.21155 -1.5632 -40" scale="1.5 1.5 1.5" rotation="0 140 0" material="" obj-model=""></a-obj-model>
+        <!-- right sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="-8.38613 -1.5632 -40" scale="1.5 1.5 1.5" rotation="0 50 0" material="" obj-model=""></a-obj-model>
+        
+        <!-- no u turn sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="22.59211 -2.44992 -67.34094" scale="2 2 2" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#no_u_turn" position="22.55519 7.48995 -67.14657" rotation="" scale="4 4 4" material="" geometry="width: 0.8"></a-image>
+        <a-image src="#oneway_l" position="22.46281 3.83489 -67.20242" rotation="0 -90 0" scale="4 4 4" material="" geometry=""></a-image>
+        
+        
+        
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="18.15162 -0.64219 -46.70291" scale="0.025 0.025 0.025" rotation="-90 80.74 0" material="" obj-model=""></a-obj-model>        
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="16.88879 -0.64219 -39.67315" scale="0.025 0.025 0.025" rotation="-90 78.79 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="12.84936 -0.64219 -34.89795" scale="0.025 0.025 0.025" rotation="-90 20 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="5.9075 -0.64219 -33.65397" scale="0.025 0.025 0.025" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="-3.08519 -0.64219 -34.71215" scale="0.025 0.025 0.025" rotation="-90 -20 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="-8.74733 -0.64219 -38.6468" scale="0.025 0.025 0.025" rotation="-90 -50 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="-11.07353 -0.64219 -44.9591" scale="0.025 0.025 0.025" rotation="-90 -90 0" material="" obj-model=""></a-obj-model>
+
+        <!-- highway sign -->        
+        <a-obj-model src="#freeway_sign_o" mtl="#freeway_sign_m" position="-9.31418 -1.03923 -70.88038" scale="0.05 0.05 0.056" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#ny_sign" position="1.45 19.4 -71.292" rotation="0 0 0.01" scale="4 5.5 1" material="" geometry="height: 1.5; width: 3.69"></a-image>
+
+        
+        
+        <a-sky src="#sky1" position="5.80143 6.18248 -87" material="" geometry="radius: 55; phiLength: 305" scale="1 1 1" rotation="0 -82.2 0"></a-sky>
+            
+<!-- subway -->
+        <a-obj-model src="#subway_hall2_o" mtl="#subway_hall2_m" position="23.009 3.2 -95.05" scale="0.075 0.04 0.029" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_hall2_o" mtl="#subway_hall2_m" position="47.98234 3.2 -143.0477" scale="0.027 0.04 0.023" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+            
+        <a-obj-model src="#subway_car_o" mtl="#subway_car_m" position="72.231 3.10653 -227" scale="" rotation="0 90 0" material="" obj-model=""
+                     animation="property: position; from: 72.231 3.10653 -227; to: 72.231 3.10653 -86; dur:6000; loop: true; dir:alternate"; easing="ease-in-out">
+        </a-obj-model>
+        <a-obj-model src="#subway_car_o" mtl="#subway_car_m" position="78.5145 3.10653 -86" scale="" rotation="0 90 0" material="" obj-model="" 
+                     animation="property: position; from: 78.5145 3.10653 -86; to: 78.5145 3.10653 -227; dur: 6000; loop: true; dir: alternate"; easing="ease-in-out">
+        </a-obj-model>
+        
+        
+        <a-obj-model src="#subway_bench_o" mtl="#subway_bench_m" position="17.1 -0.77845 -115.35517" scale="0.5 0.5 0.5" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_bench_o" mtl="#subway_bench_m" position="17.1 -0.77845 -93" scale="0.5 0.5 0.5" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_bench2_o" mtl="#subway_bench2_m" position="6.66945 -0.57084 -102.48138" scale="2 2 2" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_trash_o" mtl="#subway_trash_m" position="-0.30176 -1 -129.84577" scale="3 3 3" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_ticket_o" mtl="#subway_ticket_m" position="-0.391 -0.638 -72.407" scale="1.5 1.5 1.5" rotation="" material="" obj-model=""></a-obj-model>      
+        <a-obj-model src="#subway_ticket_o" mtl="#subway_ticket_m" position="2.255 -0.638 -72.407" scale="1.5 1.5 1.5" rotation="" material="" obj-model=""></a-obj-model>
+            
+        <a-obj-model src="#subway_turn_o" mtl="#subway_turn_m" position="4.8 -0.67338 -73.073" scale="0.025 0.025 0.025" rotation="-90 90 90" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_turn_o" mtl="#subway_turn_m" position="7.13 -0.67338 -73.073" scale="0.025 0.025 0.025" rotation="-90 90 90" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_turn_o" mtl="#subway_turn_m" position="9.46 -0.67338 -73.073" scale="0.025 0.025 0.025" rotation="-90 90 90" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_turn_o" mtl="#subway_turn_m" position="11.79 -0.67338 -73.073" scale="0.025 0.025 0.025" rotation="-90 90 90" material="" obj-model=""></a-obj-model>
+        
+            
+        <a-obj-model src="#subway_fence_o" mtl="#subway_fence_m" position="17.89788 -0.64449 -73.36123" scale="0.1 0.12 0.046" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+            
+        
+
+        <a-obj-model src="#citymap_o" mtl="#citymap_m" position="5.72921 1.32 -91.288" scale="0.002 0.002 0.002" rotation="" material="" obj-model=""></a-obj-model>
+        <a-box color="white" depth="2" height="4" width="0.5" material="color: #ffffff" geometry="depth: 5; height: 2; width: 5" rotation="0 90 0" position="5.745 0.31404 -91.295" scale="1.1 1 1.2"></a-box>
+        <a-box color="white" depth="2" height="4" width="0.5" material="color: #ff0000" geometry="depth: 5; height: 2; width: 5" rotation="0 60 0" position="6.19608 2.31278 -93.01113" scale="0.01 1 0.01"></a-box>
+        <a-box src="img/BMCC_logo.png" color="white" depth="2" height="4" width="0.5" material="color: #ffffff" geometry="depth: 1; height: 0.5; width: 1" rotation="0 90 0" position="6.22516 3.50712 -93.03717" scale=""></a-box>
+        
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 7; height: 2; width: 0.8" rotation="0 90 0" position="3.71537 8.5308 -130.96746" scale=""></a-box>
+        <a-image src="#subway_direction_sign2" position="3.71884 8.53017 -130.5" rotation="0 0 0.01" scale="4 5.5 1" material="" geometry="height: 0.36; width: 1.75"></a-image>
+            
+        <a-image src="#subway_direction_sign3" position="42 8.16375 -131.61473" rotation="0 180 0" scale="8 2 10" material="" geometry="width: 0.8"></a-image>
+            
+        <a-obj-model src="#2door_o" mtl="#2door_m" position="54.20934 5.45623 -136.52077" scale="0.05 0.06 0.048" rotation="" material="" obj-model=""></a-obj-model>
+            
+<!-- subway concrete floor -->        
+        <a-plane src="#concrete" position="-4.90858 -0.645 -78.34099" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="-4.90858 -0.645 -88.337" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="-4.90858 -0.645 -98.331" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="-4.90858 -0.645 -108.318" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="-4.90858 -0.645 -118.302" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="-4.90858 -0.645 -128.295" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+            
+        <a-plane src="#concrete" position="3.089 -0.645 -78.34099" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="3.089 -0.645 -88.337" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="3.089 -0.645 -98.331" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="3.089 -0.645 -108.318" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="3.089 -0.645 -118.302" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="3.089 -0.645 -128.295" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+            
+        <a-plane src="#concrete" position="11.086 -0.645 -78.34099" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="11.086 -0.645 -88.337" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="11.086 -0.645 -98.331" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="11.086 -0.645 -108.318" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="11.086 -0.645 -118.302" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="11.086 -0.645 -128.295" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+            
+        <a-plane src="#concrete" position="14.188 -0.644 -78.34099" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="14.188 -0.644 -88.337" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="14.188 -0.644 -98.331" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="14.188 -0.644 -108.318" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="14.188 -0.644 -118.302" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        <a-plane src="#concrete" position="14.188 -0.644 -128.295" rotation="-90 0 0" geometry="height: 10; width: 8" material=""></a-plane>
+        
+        <a-plane src="#concrete" position="13.194 -0.646 -137.29" rotation="-90 0 0" geometry="height: 8; width: 10" material=""></a-plane>
+        <a-plane src="#concrete" position="23.112 -0.643 -136.312" rotation="-90 0 0" geometry="height: 10.25; width: 10" material=""></a-plane>
+        <a-plane src="#concrete" position="33.09199 -0.646 -136.312" rotation="-90 0 0" geometry="height: 10.25; width: 10" material=""></a-plane>
+        <a-plane src="#concrete" position="43.07688 -0.645 -136.312" rotation="-90 0 0" geometry="height: 10.25; width: 10" material=""></a-plane>
+        <a-plane src="#concrete" position="53.060 -0.645 -136.312" rotation="-90 0 0" geometry="height: 10.25; width: 10" material=""></a-plane>
+        <a-plane src="#concrete" position="60.282 -0.645 -136.312" rotation="-90 0 0" geometry="height: 10.25; width: 10" material=""></a-plane>
+            
+<!-- subway tile -->
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="9.9 -7 -85.78" scale="3 3 4" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="9.9 -7 -114.92" scale="3 3 4" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="-0.738 -7 -89.85" scale="3 3 4" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="-0.738 -7 -119.03181" scale="3 3 4" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+            
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="-7.556 -6.58 -126.63037" scale="3 3 1" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="-7.556 -8.5291 -126.6" scale="3 3 1" rotation="" material="" obj-model=""></a-obj-model>            
+
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="27.85 -8.529 -143.80793" scale="3 3 4" rotation="0 90 0" material="" obj-model=""></a-obj-model>     
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="27.85 -6.58 -143.80793" scale="3 3 4" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+            
+
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="21.635 -6.58 -136.57" scale="3 3 1" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="21.635 -8.529 -136.7" scale="3 3 1" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="48.925 -6.58 -136.57" scale="3 3 1" rotation="" material="" obj-model=""></a-obj-model>
+        <a-plane color="#383838" position="14.46836 11.324 -136.19902" rotation="90 0 0" geometry="height: 10; width: 11" material=""></a-plane>
+        
+        
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="70.272 -11.165 -157.94885" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="70.272 -11.165 -196.83081" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="70.272 -11.165 -235.71081" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="34.66 -6.97273 -136.267" scale="3 3 1" rotation="0 -180 -0.07" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="52.65675 -6.96273 -136.302" scale="3 3 1" rotation="0 -180 -0.07" material="" obj-model=""></a-obj-model>
+            
+    <!-- subway stair case -->
+        <a-obj-model src="#subway_stairs_o" mtl="#subway_stairs_m" position="-1.663 -0.203 -86.177" scale="1.8 1.8 1.8" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_stairs_o" mtl="#subway_stairs_m" position="-8.897 -0.943 -118.601" scale="1.8 1.8 1.8" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        <a-plane color="#2f2f2d" position="-5.27184 8.9123 -73.205" rotation="" geometry="height: 4.86; width: 7.22" material=""></a-plane>            
+        <a-plane color="#000000" position="-5.29711 9.02452 -131.27161" rotation="" geometry="height: 4.86; width: 7.22" material=""></a-plane>
+        <a-plane color="#000000" position="-5.29711 9.02452 -73.36" rotation="0 180 0" geometry="height: 4.86; width: 7.22" material=""></a-plane>
+        
+        <a-obj-model src="#subway_chain_pole_o" mtl="#subway_chain_pole_m" position="-5.30763 -0.72013 -117.36485" scale="2.5 2.5 2.5" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#subway_closed" position="-5.21903 0.94877 -117.275" rotation="0 2 2" scale="1.64 0.68 1" material="" geometry="width: 0.8"></a-image>
+        <a-obj-model src="#subway_chain_pole_o" mtl="#subway_chain_pole_m" position="-4.99329 -0.72013 -87.46771" scale="2.5 2.5 2.5" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#subway_closed" position="-4.89976 0.95146 -87.442" rotation="0 181.94 -2.1" scale="1.65 0.67 1" material="" geometry="width: 0.8"></a-image>
+        
+    <!-- studio light -->    
+        
+        <a-obj-model src="#ceiling_light_o" mtl="#ceiling_light_m" position="-4.59221 0.6 -100" scale="0.1 0.1 0.1" rotation="30 90 0" material="" obj-model=""></a-obj-model>
+            <a-light type="spot" position="-1.2326 10.45889 -96.98756" rotation="-25 120 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="-1.2326 10.45889 -99.94968" rotation="-25 100 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="-1.2326 10.45889 -102.99025" rotation="-25 80 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="-1.2326 10.45889 -106.01303" rotation="-25 60 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+        
+        <a-obj-model src="#ceiling_light_o" mtl="#ceiling_light_m" position="14.05645 0.77992 -103.87406" scale="0.1 0.1 0.1" rotation="30 -90 0" material="" obj-model=""></a-obj-model>
+            <a-light type="spot" position="10.6085 10.74232 -97.86222" rotation="-30 240 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="10.6085 10.74232 -100.90848" rotation="-30 260 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="10.6085 10.74232 -103.90246" rotation="-30 280 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+            <a-light type="spot" position="10.6085 10.74232 -106.89417" rotation="-30 300 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>
+        
+        <a-obj-model src="#ceiling_light_o" mtl="#ceiling_light_m" position="14.05645 0.77992 -120.81715" scale="0.1 0.1 0.1" rotation="30 -90 0" material="" obj-model=""></a-obj-model>
+            <a-light type="spot" position="10.6085 10.74232 -123.84327" rotation="-45 270 0" color="#f2ff22" angle="30" light="color: #4b4d33; distance: 60"></a-light>
+        
+        <a-obj-model src="#ceiling_light_o" mtl="#ceiling_light_m" position="14.05645 0.77992 -84.53203" scale="0.1 0.1 0.1" rotation="30 -90 0" material="" obj-model=""></a-obj-model>
+            <a-light type="spot" position="10.6085 10.74232 -81.51082" rotation="-45 270 0" color="#f2ff22" angle="30" light="color: #4b4d33"></a-light>  
+            
+     <!-- frame for artwork -->
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="-8.87 6.3 -100.16354" scale="8 11.73 10.25" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="-8.87 6.3 -107.20748" scale="8 11.73 10.25" rotation="" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="-8.87 6.3 -114.4761" scale="8 11.73 10.25" rotation="" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.89165 7.28457 -128.21035" scale="3 3.81 8.28" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.89165 4.09746 -128.21" scale="3 3.81 8.28" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.89165 7.29826 -122.88491" scale="3 3.96 8.07" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.892 4.10855 -122.885" scale="3 3.96 8.07" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.89165 5.678 -105.10629" scale="8 8.43 15.04" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="17.89165 5.50593 -98.72092" scale="8 8.92 9.09" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_frame_o" mtl="#subway_frame_m" position="18.07083 5.43211 -81.03135" scale="5 10.2 11.43" rotation="0 180 0" material="" obj-model=""></a-obj-model>        
+            
+        
+<!-- subway artwork -->
+        <!-- skinny love -->
+        <a-image src="#skinny_love_sketch" position="27.19942 4.18337 -131.622" rotation="0 180 0" scale="" material="" geometry="height: 2; width: 2"></a-image>
+        <a-image src="#skinny_love" position="34.21904 4.17073 -131.6222" rotation="0 180 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        
+        <a-entity text="value: Title: I bone you (Finger heart); alphaTest: 5; wrapCount: 25; color: #ccee20; tabSize: 4.01" position="28.90019 6.37045 -132.08481" scale="5 5 5" rotation="0 180 0"></a-entity>
+        <a-entity text="value: Digital drawing that combines the use of vector and raster; alphaTest: 5; wrapCount: 25.92; tabSize: 4.01" position="29.89464 5.88118 -131.84077" scale="3 3 3" rotation="0 180 0"></a-entity>
+        
+        <!-- resume design -->
+        <a-image src="#resume_sketch" position="17.756 5.67148 -105.09152" rotation="0 -90 0" scale="" material="" geometry="height: 5.4; width: 6.6"></a-image>
+        <a-image src="#resume_design" position="17.74989 5.5 -98.7229" rotation="0 -90 0" scale="" material="" geometry="height: 5.7; width: 4"></a-image>
+        
+        <a-entity text="value: Custom design resume; align: center; alphaTest: 5; wrapCount: 35" position="17.89657 1.80957 -101.64979" scale="15 15 8" rotation="0 -90 0"></a-entity>
+        
+        <!-- poster design -->
+        <a-image src="#poster_ori" position="-8.719 6.3 -92.83093" rotation="0 90 0" scale="" material="" geometry="height: 7.5; width: 4.5"></a-image>
+        <a-image src="#poster_sketch1" position="-8.719 3.2 -96.58939" rotation="0 90 0" scale="" material="" geometry="height: 2; width: 1.5"></a-image>
+        <a-image src="#poster_sketch2" position="-8.719 3.2 -103.69561" rotation="0 90 0" scale="" material="" geometry="height: 2; width: 1.5"></a-image>
+        <a-image src="#poster_sketch3" position="-8.719 3.2 -110.86496" rotation="0 90 0" scale="" material="" geometry="height: 2; width: 1.5"></a-image>
+        <a-image src="#poster1" position="-8.719 6.3 -100.16212" rotation="0 90 0" scale="" material="" geometry="height: 7.5; width: 4.5"></a-image>
+        <a-image src="#poster2" position="-8.71919 6.3 -107.2298" rotation="0 90 0" scale="" material="" geometry="height: 7.5; width: 4.5"></a-image>
+        <a-image src="#poster3" position="-8.729 6.3 -114.46081" rotation="0 90 0" scale="" material="" geometry="height: 7.5; width: 4.5"></a-image>
+        
+        <a-entity text="value: Poster redesign project; align: center; alphaTest: 5; wrapCount: 35; color: #f7fb23" position="-2.22065 1.77384 -103.13947" scale="20 20 20" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Original poster; align: center; alphaTest: 5; wrapCount: 35" position="-8.51476 1.89449 -92.83236" scale="10 10 1" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Redesign #1 ; align: center; alphaTest: 5; wrapCount: 35" position="-8.51476 1.89449 -100.21612" scale="10 10 1" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Redesign #2; align: center; alphaTest: 5; wrapCount: 35" position="-8.51476 1.89449 -107.31383" scale="10 10 1" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Redesign #3; align: center; alphaTest: 5; wrapCount: 35" position="-8.51476 1.89449 -114.46254" scale="10 10 1" rotation="0 90 0"></a-entity>
+        
+        <!-- logo design -->
+        <a-image src="#logo_design1" position="14.03484 4.39042 -141.25" rotation="" scale="" material="" geometry="height: 6; width: 6"></a-image>
+        <a-image src="#logo_design2" position="17.82771 7.29815 -128.20805" rotation="0 -90 0" scale="" material="" geometry="height: 2.4; width: 3.6"></a-image>
+        <a-image src="#logo_design3" position="17.828 4.09757 -128.208" rotation="0 -90 0" scale="" material="" geometry="height: 2.4; width: 3.6"></a-image>
+        <a-image src="#logo_design4" position="17.828 7.30329 -122.88303" rotation="0 -90 0" scale="" material="" geometry="height: 2.5; width: 3.5"></a-image>
+        <a-image src="#logo_design5" position="17.828 4.098 -122.883" rotation="0 -90 0" scale="" material="" geometry="height: 2.5; width: 3.5"></a-image>
+        
+        <a-entity text="value: Virtual brand design: Prime lumber furnitures; align: center; alphaTest: 5; wrapCount: 20; tabSize: 4.01" position="17.89657 1.86259 -125.4737" scale="8 8 8" rotation="0 -90 0"></a-entity>
+        <a-entity text="value: business card mock-up; align: center; alphaTest: 5; wrapCount: 20; tabSize: 4.01" position="17.89657 5.72711 -128.25011" scale="3 3 3" rotation="0 -90 0"></a-entity>
+        <a-entity text="value: Company sign &amp; office plate; align: center; alphaTest: 5; wrapCount: 22.5; tabSize: 4.01" position="17.89657 5.72711 -122.87843" scale="3 3 3" rotation="0 -90 0"></a-entity>
+        
+        <!-- skeleton sketch -->
+        <a-image src="#skeleton1" position="17.95 4 -119.62904" rotation="0 -90 0" scale="" material="" geometry="height: 3; width: 2"></a-image>
+        <a-image src="#skeleton2" position="17.95 4 -117.40053" rotation="0 -90 0" scale="" material="" geometry="height: 3; width: 2"></a-image>
+        <a-image src="#skeleton3" position="17.95 4 -115.2074" rotation="0 -90 0" scale="" material="" geometry="height: 3; width: 2"></a-image>
+        
+        <a-entity text="value: Skeletal &amp; muscle structure study sketch; align: center; alphaTest: 5; wrapCount: 31.69; tabSize: 4.01" position="17.89657 6.18768 -115.03542" scale="8 8 8" rotation="0 -90 0"></a-entity>
+        
+        <!-- muscle sketch -->
+        <a-image src="#muscle1" position="17.95 4 -112.98932" rotation="0 -90 0" scale="" material="" geometry="height: 3; width: 2"></a-image>
+        <a-image src="#muscle2" position="17.95 4 -110.81524" rotation="0 -90 0" scale="" material="" geometry="height: 3; width: 2"></a-image>
+        
+        <!-- sketch practices -->
+        <a-image src="#hulk" position="17.95 5.41092 -81.02688" rotation="0 -90 0" scale="" material="" geometry="height: 6.5; width: 5"></a-image>
+        <a-image src="#hercules" position="17.95 4.86406 -90.8285" rotation="0 -90 0" scale="" material="" geometry="height: 5; width: 4"></a-image>
+        <a-image src="#pole_stand" position="17.95 3.63853 -94.1661" rotation="0 -90 0" scale="" material="" geometry="height: 2.5; width: 1.75"></a-image>
+        
+        <a-entity text="value: Figure drawing at the metropolitan museum of art; align: center; alphaTest: 5; wrapCount: 25" position="17.89657 1.89192 -92.81605" scale="5 5 5" rotation="0 -90 0"></a-entity>
+        <a-entity text="value: Sketch of Hulk for the study of perspective; align: center; alphaTest: 5; wrapCount: 20.08" position="17.89657 1.38881 -80.99315" scale="4 4 4" rotation="0 -90 0"></a-entity>
+        
+        <!-- digital art practice -->
+        <a-image src="#practice1" position="25.9209 5 -141.21" rotation="" scale="" material="" geometry="height: 3.5; width: 3.5"></a-image>
+        <a-image src="#practice2" position="31.76898 5 -141.21" rotation="" scale="" material="" geometry="height: 3.5; width: 3.5"></a-image>
+        <a-image src="#practice3" position="20.7291 3.98332 -141.21" rotation="" scale="" material="" geometry="height: 1.5; width: 2"></a-image>
+        <a-image src="#practice4" position="37.35259 5 -141.21" rotation="" scale="" material="" geometry="height: 3; width: 3"></a-image>
+        <a-image src="#practice5" position="42.76154 5 -141.21" rotation="" scale="" material="" geometry="height: 3; width: 3"></a-image>
+        
+        <a-entity text="value: Title: Ice cream truck; alphaTest: 5; wrapCount: 16.6; color: #ccee20; tabSize: 4.01" position="21.12554 2.97124 -141.19518" scale="2.8 2.8 2.8" rotation=""></a-entity>
+        <a-entity text="value: Title: Energy drink; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="25.67687 3.01628 -141.19518" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Title: Magic shroom; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="31.52518 3.01628 -141.19518" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Title: Mind on display; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="37.38744 3.21638 -141.19518" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Title: Gassy boy; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="42.78674 3.21638 -141.19518" scale="3 3 3" rotation=""></a-entity>
+        
+        <a-entity text="value: First digital art using drawing tablet; alphaTest: 5; wrapCount: 22.26; tabSize: 4.01" position="20.72512 2.53334 -141.23056" scale="2 2 2" rotation=""></a-entity>
+        <a-entity text="value: Digital drawing using color; alphaTest: 5; wrapCount: 28.1; tabSize: 4.01" position="25.69294 2.59707 -141.23056" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Digital drawing using different paint brushes; alphaTest: 5; wrapCount: 27.68; tabSize: 4.01" position="31.50876 2.4976 -141.23056" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Digital drawing using Vector; alphaTest: 5; wrapCount: 31.51; tabSize: 4.01" position="37.40829 2.8776 -141.23056" scale="3 3 3" rotation=""></a-entity>
+        <a-entity text="value: Digital drawing using Vector 2; alphaTest: 5; wrapCount: 32.43; tabSize: 4.01" position="42.77678 2.85951 -141.23056" scale="3 3 3" rotation=""></a-entity>
+            
+        <!-- portal -->
+        <a-link href="train_platform.html" title="Train_platform" image="#platform" geometry="primitive: plane" material="shader: portal; pano: file:///D:/K's%20Art%20work/Portfolio/VR_exhibition_portfolio/img/platform.jpg; side: double; backgroundColor: #ffffff" link="" rotation="0 -90 0" position="53.19402 3.53739 -136.13928" scale="4.75 4.48 1" visible=""><a-entity text="color: white; align: center; font: kelsonsans; value: Train_platform; width: 4" position="0 1.5 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" visible="false"></a-entity></a-link>
+        
+            
+            
+        </a-scene>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    </head>
+    
+    <body>
+    <a-scene>    
+<!--assets-->
+        <a-assets>
+<!-- 3D Models -->
+            <a-asset-item id="subway_car_o" src="model/obj/subway_cart/subwaycart.obj"></a-asset-item>
+            <a-asset-item id="subway_car_m" src="model/obj/subway_cart/subwaycart.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_wall_o" src="model/obj/subway_wall/subway-wall.obj"></a-asset-item>
+            <a-asset-item id="subway_wall_m" src="model/obj/subway_wall/subway-wall.mtl"></a-asset-item>
+            
+            <a-asset-item id="tunnel_o" src="model/obj/subway_tunnel/subway_tunnel.obj"></a-asset-item>
+            <a-asset-item id="tunnel_m" src="model/obj/subway_tunnel/subway_tunnel.mtl"></a-asset-item>
+            
+            <a-asset-item id="exit_light_o" src="model/obj/exit_light/exit_sign.obj"></a-asset-item>
+            <a-asset-item id="exit_light_m" src="model/obj/exit_light/exit_sign.mtl"></a-asset-item>
+            
+            <a-asset-item id="fire_esc_1_o" src="model/obj/Fire_escape_1door/Fire_escape_door_single.obj"></a-asset-item>
+            <a-asset-item id="fire_esc_1_m" src="model/obj/Fire_escape_1door/Fire_escape_door_single.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_trash_o" src="model/obj/subway_trash/subway_trash.obj"></a-asset-item>
+            <a-asset-item id="subway_trash_m" src="model/obj/subway_trash/subway_trash.mtl"></a-asset-item>
+            
+            <a-asset-item id="subway_chain_pole_o" src="model/obj/stop_chain_pole/Stop_chain_pole.obj"></a-asset-item>
+            <a-asset-item id="subway_chain_pole_m" src="model/obj/stop_chain_pole/Stop_chain_pole.mtl"></a-asset-item>
+            
+            
+            
+<!-- Images -->            
+            <img id="subway_direction_sign1" src="img/subway_exit_sign.png">
+            
+            <img id="platform" src="img/subway_platform.jpg">
+            
+            <img id="pier_portal" src="img/pier_portal.jpg">
+            
+            <!-- art work -->
+            <img id="girl1" src="img/artwork/blonde_girl.jpg">
+            <img id="girl2" src="img/artwork/brunette_girl.jpg">
+            
+            <img id="nyamcat1" src="img/artwork/nyamcat1.jpg">
+            <img id="nyamcat2" src="img/artwork/nyamcat2.jpg">
+            <img id="nyamcat3" src="img/artwork/nyamcat3.jpg">
+            <img id="nyamcat4" src="img/artwork/nyamcat4.jpg">
+            
+            <img id="portal_gun_sketch1" src="img/artwork/portal_gun_sketch.jpg">
+            <img id="portal_gun_sketch2" src="img/artwork/portal_gun_sketch2.jpg">
+            <img id="portal_gun" src="img/artwork/portal_gun.jpg">
+            
+        </a-assets>
+<!-- scene enties -->
+    <a-camera user-height="1.6"; position="67 5 -142" rotation="0 0 0">
+        <a-cursor></a-cursor>    
+    </a-camera>
+        
+    <a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.5722448147213711" visible=""></a-entity>
+    <a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.572; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity>
+    <a-sky radius="300" theta-length="110" class="environment" material="shader: skyshader; sunPosition: -0.10389385923870163 0.9444896294427422 0.31168157771610494" geometry="" scale="-1.5 1 1.5"></a-sky>
+<!-- tunnel -->
+    <!-- subway cars -->
+        <a-obj-model src="#subway_car_o" mtl="#subway_car_m" position="72.231 3.10653 -227" scale="" rotation="0 90 0" material="" obj-model=""
+                     animation="property: position; from: 72.231 3.10653 -300; to: 72.231 3.10653 -86; dur:6000; loop: true; dir:alternate"; easing="ease-in-out">
+        </a-obj-model>
+        <a-obj-model src="#subway_car_o" mtl="#subway_car_m" position="78.5145 3.10653 -86" scale="" rotation="0 90 0" material="" obj-model="" 
+                     animation="property: position; from: 78.5145 3.10653 -86; to: 78.5145 3.10653 -300; dur: 6000; loop: true; dir: alternate"; easing="ease-in-out">
+        </a-obj-model>
+        
+    <!-- side holes -->    
+        <a-plane color="#000000" position="74.60647 7.63477 -131.03076" rotation="0 180 0" geometry="height: 20; width: 24" material=""></a-plane>
+        <a-plane color="#000000" position="74.60647 7.63477 -241.211" rotation="" geometry="height: 20; width: 24" material=""></a-plane>
+    <!-- tunnel struckture -->    
+        <a-obj-model src="#tunnel_o" mtl="#tunnel_m" position="74.6 -2.48208 -143.01885" scale="3 3 3" rotation="0 180 0" material="" obj-model=""></a-obj-model>        
+        <a-obj-model src="#tunnel_o" mtl="#tunnel_m" position="74.6 -2.48208 -166.916" scale="3 3 3" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#tunnel_o" mtl="#tunnel_m" position="74.6 -2.48208 -190.78" scale="3 3 3" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#tunnel_o" mtl="#tunnel_m" position="74.6 -2.48208 -214.643" scale="3 3 3" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#tunnel_o" mtl="#tunnel_m" position="74.6 -2.48208 -238.531" scale="3 3 3" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-torus color="white" arc="180" position="76.21214 8.40294 -191.38177" scale="2 2 300" rotation="0 0 -46.73" radius="5" radius-tubular="0.1" material="emissive: #000000" geometry="arc: 210; radius: 6.49"></a-torus>
+    <!-- platform floor -->    
+        <a-image src="#platform" position="67.169 0.517 -140.00416" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>        
+        <a-image src="#platform" position="67.169 0.517 -157.96" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        <a-image src="#platform" position="67.169 0.517 -175.862" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        <a-image src="#platform" position="67.169 0.517 -193.752" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        <a-image src="#platform" position="67.169 0.517 -211.742" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        <a-image src="#platform" position="67.169 0.517 -229.737" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        <a-image src="#platform" position="67.169 0.517 -241.607" rotation="90 90 0" scale="18 7 1" material="" geometry=""></a-image>
+        
+        <a-obj-model src="#subway_trash_o" mtl="#subway_trash_m" position="64.92816 0.441 -134.87626" scale="3 3 3" rotation="" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_chain_pole_o" mtl="#subway_chain_pole_m" position="67.24586 0.441 -131.92963" scale="2.5 2.5 2" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#subway_chain_pole_o" mtl="#subway_chain_pole_m" position="67.24586 0.441 -240" scale="2.5 2.5 2" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        
+    <!-- subway tile -->
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="68.400 -11.165 -147.7" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="68.400 -11.165 -186.621" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#subway_wall_o" mtl="#subway_wall_m" position="68.400 -11.165 -225.521" scale="4 4 1" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+               
+    <!-- exit door -->
+        <a-obj-model src="#fire_esc_1_o" mtl="#fire_esc_1_m" position="63.79926 0.51924 -233.75536" scale="3 3 3" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#exit_light_o" mtl="#exit_light_m" position="63.88113 6.59903 -239.27011" scale="" rotation="" material="" obj-model=""></a-obj-model>
+        
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 6; height: 1.5" rotation="0 90 0" position="66.61855 8.38895 -170.85227" scale=""></a-box>
+        <a-image src="#subway_direction_sign1" position="66.81185 8.3876 -170.5943" rotation="0 0 0.01" scale="4 5.5 1" material="" geometry="height: 0.27; width: 1.4"></a-image>
+        
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 5.5; height: 1.5" rotation="" position="64.18758 11.03335 -236.11291" scale=""></a-box>
+        <a-image src="#subway_direction_sign1" position="64.44367 11.03384 -236.11111" rotation="0 90 0.01" scale="4 5.5 1" material="" geometry="height: 0.27; width: 1.375"></a-image>
+    
+    <!-- artworks -->
+        <!-- girl digital art -->
+        <a-image src="#girl1" position="63.8 4.5 -151.05324" rotation="0 90 0" scale="" material="" geometry="height: 4; width: 4"></a-image>
+        <a-image src="#girl2" position="63.8 4.5 -158.87212" rotation="0 90 0" scale="" material="" geometry="height: 4; width: 3.5"></a-image>
+        
+        <a-entity text="value: Title: Rina; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 2.21493 -151.59067" scale="5 5 5" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title:  brown eyed; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 2.15991 -158.68775" scale="3 3 3" rotation="0 90 0"></a-entity>
+        
+        <!-- nyam cat digital art -->
+        <a-image src="#nyamcat1" position="63.8 4.5 -175.06084" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        <a-image src="#nyamcat2" position="63.8 4.5 -166.93199" rotation="0 90 0" scale="" material="" geometry="height: 3.5; width: 5"></a-image>
+        <a-image src="#nyamcat3" position="63.8 4.5 -182.85786" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        <a-image src="#nyamcat4" position="63.8 4.5 -190.63134" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        
+        <a-entity text="value: Title: Nyam cat; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 2.24865 -166.93659" scale="5 5 5" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title: Nyam cat quote 1; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 1.65 -174.52708" scale="4 4 4" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title: Nyam cat quote 2; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 1.65 -182.34898" scale="4 4 4" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title: Nyam cat quote 3; alphaTest: 5; wrapCount: 22.79; color: #ccee20; tabSize: 4.01" position="63.8 1.65 -190.10739" scale="4 4 4" rotation="0 90 0"></a-entity>
+        
+        <!-- portal gun digital art -->
+        <a-image src="#portal_gun_sketch1" position="63.8 4.5 -206" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        <a-image src="#portal_gun_sketch2" position="63.8 4.5 -214" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        <a-image src="#portal_gun" position="63.8 4.5 -222" rotation="0 90 0" scale="" material="" geometry="height: 5; width: 5"></a-image>
+        
+        <a-entity text="value: Title: Portal gun rough sketch; alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="63.8 1.60079 -205.52345" scale="4 4 4" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title: Portal gun vectorized; alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="63.8 1.626 -213.50023" scale="4 4 4" rotation="0 90 0"></a-entity>
+        <a-entity text="value: Title: Portal gun blue print; alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="63.8 1.63417 -221.47598" scale="4 4 4" rotation="0 90 0"></a-entity>
+        
+        <!-- portal -->
+        <a-link href="pier_alley.html" title="Alley_to_pier" image="#pier_portal" geometry="primitive: circle; radius: 0.86; segments: 64" material="shader: portal; pano: file:///D:/K's%20Art%20work/Portfolio/VR_exhibition_portfolio/img/pier_portal.jpg; side: double" link="" rotation="0 90 0" position="63.85521 5.60107 -235.85057"><a-entity text="color: white; align: center; font: kelsonsans; value: Alley_to_pier; width: 4" position="0 1.5 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; pano: [object HTMLImageElement]; side: back" visible="false"></a-entity></a-link>
+
+        
+        
+        
+    </a-scene>
+    </body>          
+</html>

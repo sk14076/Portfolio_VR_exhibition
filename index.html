@@ -1,0 +1,169 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>    
+<!--assets-->
+        <a-assets>
+            
+<!-- 3D Models -->
+            <a-asset-item id="a380_o" src="model/obj/a380/11803_Airplane_v1_l1.obj"></a-asset-item>
+            <a-asset-item id="a380_m" src="model/obj/a380/11803_Airplane_v1_l1.mtl"></a-asset-item>
+            
+            <a-asset-item id="brdg_o" src="model/obj/bridge/brije.obj"></a-asset-item>
+            <a-asset-item id="brdg_m" src="model/obj/bridge/brije.mtl"></a-asset-item>
+            
+            <a-asset-item id="pointer_o" src="model/obj/pointer/pointer.obj"></a-asset-item>
+            <a-asset-item id="pointer_m" src="model/obj/pointer/pointer.mtl"></a-asset-item>
+    
+            <a-asset-item id="brcde_o" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.obj"></a-asset-item>
+            <a-asset-item id="brcde_m" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.mtl"></a-asset-item>
+            
+            <a-asset-item id="sign_plate_o" src="model/obj/sign_plate/sign_plate.obj"></a-asset-item>
+            <a-asset-item id="sign_plate_m" src="model/obj/sign_plate/sign_plate.mtl"></a-asset-item>
+                        
+            
+<!-- Images -->            
+            
+            <img id="wht_wall" src="img/white_wallpaper.png">
+
+            <img id="arrow" src="img/arrow.png">
+            
+            <img id="questionmark_wall1" src="img/question_mark_bg1.png">
+
+           
+
+            <img id="supermario_box" src="img/sm_box.png">
+            
+            <img id="wrong_way" src="img/wrong_way_sign.png">
+            
+            <img id="memory1" src="img/Photography/memory1_bk.png">
+            
+            <img id="memory2" src="img/Photography/memory2_bk.png">
+            
+            <img id="memory3" src="img/Photography/memory3_bk.png">
+
+            <img id="oneway_l" src="img/one_way_left.png">
+            
+            <img id="oneway_r" src="img/one_way_right.png">
+            
+            <img id="control" src="img/control_map.png">    
+            
+        </a-assets>    
+                    
+<!-- scene entities -->        
+    <a-camera user-height="1.6"; position="5 3 24" rotation="0 180 0">
+        <a-cursor></a-cursor>    
+    </a-camera>
+    
+            
+            
+    <a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.5722448147213711" visible=""></a-entity>
+    <a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.572; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity>
+    <a-sky radius="300" theta-length="110" class="environment" material="shader: skyshader; sunPosition: -0.10389385923870163 0.9444896294427422 0.31168157771610494" geometry="" scale="-1.5 1 1.5"></a-sky>
+    
+        
+        
+        
+    <!-- starting poingt bridge --> 
+        <!-- bridge -->
+        <a-obj-model src="#brdg_o" mtl="#brdg_m" position="-2.4 -20 -10" scale="5 10 15" rotation="0 90 0"></a-obj-model>
+        <!-- instructions -->
+        <a-image src="#control" position="5 4 20" rotation="" scale="3 3 3" material="" geometry="width: 2"></a-image>
+        <a-entity text="value: Use the keyboard to move W- Forward S- Backwards A- Left D- Right; align: center; alphaTest: 5; wrapCount: 20.94; color: #ffffff" scale="3 3 3" rotation="" position="3.8102 1.88365 20"></a-entity>
+        <a-entity text="value: Use the mouse to change view Click &amp; drag; align: center; alphaTest: 5; wrapCount: 24.5; color: #ffffff" scale="3 3 3" rotation="" position="7.31296 1.88365 20"></a-entity>
+        
+        <a-plane src="#memory1" position="-25.41811 22.919 35.90739" rotation="0 120 0" geometry="height: 50; width: 40" material=""></a-plane>
+        <a-plane src="#memory2" position="4.49754 22.91871 53.09007" rotation="0 180 0" geometry="height: 50; width: 40" material=""></a-plane>
+        <a-plane src="#memory3" position="33.09253 22.919 37.90357" rotation="0 234 0" geometry="height: 50; width: 35.5" material=""></a-plane>
+                    
+        <!-- middle sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="5 -1.5632 50" scale="1.5 1.5 1.5" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#wrong_way" position="5 5.86098 49.850" rotation="0 180 0" scale="3 3 3" material="" geometry="width: 0.8"></a-image>
+        <!-- left sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="17.21155 -1.5632 40" scale="1.5 1.5 1.5" rotation="0 140 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#wrong_way" position="17.08456 5.86098 39.91962" rotation="0 230 0" scale="3 3 3" material="" geometry="width: 0.8"></a-image>
+        <!-- right sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="-8.38613 -1.5632 40" scale="1.5 1.5 1.5" rotation="0 50 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#wrong_way" position="-8.29356 5.88797 39.86316" rotation="0 140 0" scale="3 3 3" material="" geometry="width: 0.8"></a-image>
+        
+        
+        <a-entity text="value: I’m looking forward to the future and feeling grateful for the past. -Mike Rowe-; align: center; alphaTest: 5; wrapCount: 26" scale="30 30 1" rotation="0 180 0" position="3.5 12.80222 50.63125"></a-entity>
+        
+        <a-entity text="value: If I cease searching, then, woe is me,     I am lost. That is how I look at it - keep going, keep going come what may. -Vincent van Gogh, The Letters of Vincent van Gogh-; align: center; alphaTest: 5; wrapCount: 31; color: #000000" scale="10 10 10" rotation="" position="5.11642 9.31875 -17.65269"></a-entity>
+        
+        <!-- one way sign -->
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="20.37545 -0.94804 11.53168" scale="2 2 2" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        <a-image src="#oneway_r" position="-11.15 8.95356 11.50393" rotation="0 90 0" scale="6 6 6" material="" geometry=""></a-image>
+        <a-obj-model src="#sign_plate_o" mtl="#sign_plate_m" position="-11.36431 -0.94804 11.53168" scale="2 2 2" rotation="" material="" obj-model=""></a-obj-model>
+        <a-image src="#oneway_l" position="20.1551 8.95356 11.50393" rotation="0 -90 0" scale="6 6 6" material="" geometry=""></a-image>
+        
+        
+    <!-- blind walls for nyc -->
+        <a-plane src="#questionmark_wall1" position="43.862 32.00527 -10.550" rotation="0 -30 0" geometry="height: 70; width: 60"></a-plane>
+        <a-plane src="#questionmark_wall1" position="-9.55466 37 -25" rotation="" geometry="height: 60; width: 60" material=""></a-plane>
+        <a-plane src="#questionmark_wall1" position="-65.516 32.005 -10" rotation="0 30 0" geometry="height: 70; width: 60" material=""></a-plane>
+        
+               
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-0.02526 21.47301 -19.6808" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-7.16088 46.41877 -17.58406" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-14.50009 57.54835 -17.58406" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-49.19981 45.90206 -13.13452" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-61.4914 34.39254 -0.49055" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-32.19193 59.31112 -20.05917" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="4.76858 52.05915 -17.78946" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="19.438 22.83595 -17.78946" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="60.45224 45.2526 4.136" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="30.46694 56.8729 -14.44446" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="46.99326 20.71909 -1.12829" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        
+        
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-35.74083 17.23181 -20.52685" scale="" material="" geometry=""
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="-9.70215 10.03119 -19.6808" scale="" material="" geometry="" 
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+        <a-box src="#supermario_box" depth="3" height="3" width="3" position="13.65901 8.16806 -15.56409" scale="" material="" geometry="" 
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+
+<!-- pointer -->
+        <a-obj-model src="#pointer_o" mtl="#pointer_m" position="5 5 -18" scale="0.1 0.1 0.1" rotation="0 0 0"
+                     animation="property: position; from: 5 6.5 -18; to: 5 5 -18; dur: 1000; loop: true; dir:alternate">
+        </a-obj-model>
+        
+        <a-image src="#arrow" position="5.15353 -0.38039 -15" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        <a-image src="#arrow" position="5.15353 -0.38039 -9" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        <a-image src="#arrow" position="5.15353 -0.38039 -3" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        <a-image src="#arrow" position="5.15353 -0.38039 3" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        <a-image src="#arrow" position="5.15353 -0.38039 9" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        <a-image src="#arrow" position="5.15353 -0.38039 15" rotation="90 0 -90" material="" geometry="" scale="2 2 2"></a-image>
+        
+        
+        
+<!-- airplane -->        
+        <a-obj-model src="#a380_o" mtl="#a380_m" position="-17 -2.40966 -25" scale="0.05 0.05 0.05" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
+        
+        <!-- portal -->
+        <a-link href="airplane.html" title="Flight_to_NY" image="#" geometry="primitive: circle; segments: 64" material="shader: portal; backgroundColor: #ffffff; strokeColor: #000000" link="titleColor: #000000" rotation="-17.59 0 0" position="5.125 2.15236 -18.00753" scale="0.84 1.48 1"><a-entity text="color: white; align: center; font: kelsonsans; value: Flight_to_NY; width: 4" position="0 1.5 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; side: back" visible="false"></a-entity></a-link>
+
+                 
+                            
+        </a-scene>
+    </body>
+</html>

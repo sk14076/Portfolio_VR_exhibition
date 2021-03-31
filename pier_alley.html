@@ -1,0 +1,183 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    </head>
+    
+    <body>
+    <a-scene>    
+<!--assets-->
+        <a-assets>
+<!-- 3D Models -->
+        <!-- street alley -->
+            <a-asset-item id="fire_esc_1_o" src="model/obj/Fire_escape_1door/Fire_escape_door_single.obj"></a-asset-item>
+            <a-asset-item id="fire_esc_1_m" src="model/obj/Fire_escape_1door/Fire_escape_door_single.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_wall_o" src="model/obj/street_wall1/street_wall1.obj"></a-asset-item>
+            <a-asset-item id="street_wall_m" src="model/obj/street_wall1/street_wall1.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_deadend_o" src="model/obj/street_deadend/street_wall_deadend.obj"></a-asset-item>
+            <a-asset-item id="street_deadend_m" src="model/obj/street_deadend/street_wall_deadend.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_building_o" src="model/obj/street_building/street_building.obj"></a-asset-item>
+            <a-asset-item id="street_building_m" src="model/obj/street_building/street_building.mtl"></a-asset-item>
+            
+            <a-asset-item id="glass_building_o" src="model/obj/glass_building/glass_building.obj"></a-asset-item>
+            <a-asset-item id="glass_building_m" src="model/obj/glass_building/glass_building.mtl"></a-asset-item>
+            
+            <a-asset-item id="nybs_o" src="model/obj/Landmark/nybs/13940_New_York_City_Brownstone_Building_v1_l2.obj"></a-asset-item>
+            <a-asset-item id="nybs_m" src="model/obj/Landmark/nybs/13940_New_York_City_Brownstone_Building_v1_l2.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_path_o" src="model/obj/street_path/street_path.obj"></a-asset-item>
+            <a-asset-item id="street_path_m" src="model/obj/street_path/street_path.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_path_poly_o" src="model/obj/street_path_poly/street_path_poly.obj"></a-asset-item>
+            <a-asset-item id="street_path_poly_m" src="model/obj/street_path_poly/street_path_poly.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_building_side_o" src="model/obj/street_building_side/street_building_side.obj"></a-asset-item>
+            <a-asset-item id="street_building_side_m" src="model/obj/street_building_side/street_building_side.mtl"></a-asset-item>
+            
+            <a-asset-item id="street_building_side2_o" src="model/obj/street_building_side2/street_building_side2.obj"></a-asset-item>
+            <a-asset-item id="street_building_side2_m" src="model/obj/street_building_side2/street_building_side2.mtl"></a-asset-item>
+            
+            
+            <a-asset-item id="sign_plate_o" src="model/obj/sign_plate/sign_plate.obj"></a-asset-item>
+            <a-asset-item id="sign_plate_m" src="model/obj/sign_plate/sign_plate.mtl"></a-asset-item>
+            
+            <a-asset-item id="brcde_o" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.obj"></a-asset-item>
+            <a-asset-item id="brcde_m" src="model/obj/PoliceBarricade/10559_PoliceBarricade_v1-L3.mtl"></a-asset-item>
+            
+            
+            <!-- pier -->
+            <a-asset-item id="water_o" src="model/obj/water/water.obj"></a-asset-item>
+            <a-asset-item id="water_m" src="model/obj/water/water.mtl"></a-asset-item>
+            
+            <a-asset-item id="LibertyStatue_o" src="model/obj/Landmark/LibertyStatue/statue_of_lib.obj"></a-asset-item>
+            <a-asset-item id="LibertyStatue_m" src="model/obj/Landmark/LibertyStatue/statue_of_lib.mtl"></a-asset-item>
+            
+            <a-asset-item id="StatenIslandFerry_o" src="model/obj/Landmark/StatenIslandFerry/13922_Staten_Island_Ferry_V1_l1.obj"></a-asset-item>
+            <a-asset-item id="StatenIslandFerry_m" src="model/obj/Landmark/StatenIslandFerry/13922_Staten_Island_Ferry_V1_l1.mtl"></a-asset-item>
+            
+            <a-asset-item id="fire_esc_1_o" src="model/obj/Fire_escape_1door/Fire_escape_door_single.obj"></a-asset-item>
+            <a-asset-item id="fire_esc_1_m" src="model/obj/Fire_escape_1door/Fire_escape_door_single.mtl"></a-asset-item>
+            
+            <a-asset-item id="pier_o" src="model/obj/pier/pier.obj"></a-asset-item>
+            <a-asset-item id="pier_m" src="model/obj/pier/pier.mtl"></a-asset-item>
+            
+            <a-asset-item id="pier_frame_o" src="model/obj/pier_picture_frame/pier_picture%20frame.obj"></a-asset-item>
+            <a-asset-item id="pier_frame_m" src="model/obj/pier_picture_frame/pier_picture%20frame.mtl"></a-asset-item>
+            
+            <a-asset-item id="Korean_flag_o" src="model/obj/Korean_flag/Korean_flag.obj"></a-asset-item>
+            <a-asset-item id="Korean_flag_m" src="model/obj/Korean_flag/Korean_flag.mtl"></a-asset-item>
+            
+<!-- images -->
+            <img id="concrete" src="img/concrete.png">
+            
+            <img id="white_brickwall" src="img/white_brick_wall.jpg">
+            
+            <img id="pier_sky" src="img/pier_sky.jpg">
+            
+        <!-- artworks -->
+        <img id="trigram_sky" src="img/artwork/trigrams_sky.jpg">
+        <img id="trigram_earth" src="img/artwork/trigrams_earth.jpg">
+        <img id="trigram_water" src="img/artwork/trigrams_water.jpg">
+        <img id="trigram_fire" src="img/artwork/trigrams_fire.jpg">
+            
+            
+            
+        </a-assets>    
+<!-- scene enties -->
+    <a-camera user-height="1.6" ;="" position="60.09598 5 -238.49269" rotation="0 90 0" camera="" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+        <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor>    
+    </a-camera>
+        
+    <a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #CEE4F0; intensity: 0.5722448147213711" visible=""></a-entity>
+    <a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.572; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity>
+        
+    <a-sky src="#pier_sky" material="" geometry="radius: 150" position="-40.4579 0 -335.73376" rotation="0 -45 0"></a-sky>
+    
+            
+    <!-- street alley -->
+        <a-obj-model src="#fire_esc_1_o" mtl="#fire_esc_1_m" position="61.70642 0 -240.13807" scale="3 3 3" rotation="0 -90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#street_wall_o" mtl="#street_wall_m" position="44.00544 -0.02359 -240.5" scale="2 2 2" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#street_building_o" mtl="#street_building_m" position="45.14864 -1.51259 -242.49733" scale="3.5 5.27 3.5" rotation="0 -0.47 3.56" material="" obj-model=""></a-obj-model>
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 10; height: 10" rotation="0 90 0" position="51.44428 5.82092 -247.691" scale="20.15 1.46 2.5"></a-box>        
+        
+        
+        
+        <a-plane src="#concrete" position="61.822 15.76116 -237.12163" rotation="0 -90 0" geometry="height: 33; width: 20" material=""></a-plane>
+        <a-plane src="#concrete" position="14.49526 14.249 -242.431" rotation="" geometry="height: 30; width: 30" material=""></a-plane>
+        <a-plane src="#concrete" position="29.5 14.23905 -257.37855" rotation="0 90 0" geometry="height: 30; width: 30" material=""></a-plane>
+        
+        <a-plane src="#white_brickwall" position="34.13803 11.11804 -267.85048" rotation="" geometry="height: 10; width: 10.15" material=""></a-plane>
+
+        
+        
+        <a-obj-model src="#street_deadend_o" mtl="#street_deadend_m" position="33.40152 0.13849 -257.68562" scale="1 0.75 1" rotation="-88 -0.47 3.56" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#brcde_o" mtl="#brcde_m" position="34.37942 -0.08387 -243.42349" scale="0.025 0.025 0.025" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#glass_building_o" mtl="#glass_building_m" position="-19.746 -0.05825 -224.13458" scale="0.01 0.01 0.01" rotation="0 180 0" material="" obj-model=""></a-obj-model>
+        
+                
+        <a-obj-model src="#street_path_poly_o" mtl="#street_path_poly_m" position="-15.94792 -3.407 -301.90258" scale="120 100 100" rotation="0 100.22 -1.13" material="" obj-model=""></a-obj-model>
+        <a-plane color="black" position="-13.63221 -0.68476 -262.21547" rotation="-91.36 0 0" geometry="height: 80; width: 30" material=""></a-plane>    
+    
+        <a-obj-model src="#nybs_o" mtl="#nybs_m" position="-20.53356 -0.68438 -243.75579" scale="0.03 0.045 0.041" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#street_building_side_o" mtl="#street_building_side_m" position="-3.59082 -1.70749 -269.12295" scale="290.95 300.02 300" rotation="0 -79.85 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#street_building_side_o" mtl="#street_building_side_m" position="16.31634 -3.12501 -301.59476" scale="290.95 300.02 300" rotation="0 187.64 0" material="" obj-model=""></a-obj-model>
+        
+        
+        <a-obj-model src="#street_building_side2_o" mtl="#street_building_side2_m" position="-15.83523 -1.90012 -285.61527" scale="170 150.69 100" rotation="0 98.81 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#street_building_side2_o" mtl="#street_building_side2_m" position="-17.7597 14.67196 -285.615" scale="170 150.69 100" rotation="0 98.81 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#street_building_side2_o" mtl="#street_building_side2_m" position="-19.4571 31.40229 -285.01216" scale="170 150.69 100" rotation="0 98.81 0" material="" obj-model=""></a-obj-model>
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 10; height: 10" rotation="0 180 0" position="-28.4517 20.11119 -284.00227" scale="30 5 4.5"></a-box>
+        
+        <a-box color="black" depth="2" height="4" width="0.5" material="" geometry="depth: 10; height: 10" rotation="0 90 0" position="17.99169 -3.42424 -304.65911" scale="30 3 4.5"></a-box>
+        <a-obj-model src="#street_building_side_o" mtl="#street_building_side_m" position="33.48514 8.53447 -271.80668" scale="290.95 300.02 300" rotation="" material="" obj-model=""></a-obj-model>
+    
+    <!-- pier -->
+        <a-obj-model src="#pier_o" mtl="#pier_m" position="-13.62051 0.69042 -310.26086" scale="" rotation="0 100 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#pier_o" mtl="#pier_m" position="-49.34428 0.69 -325.22691" scale="" rotation="0 -170 0" material="" obj-model=""></a-obj-model>  
+        
+        <a-plane src="#wht_wall" position="-28.85389 16.60483 -306.55" rotation="0 180 0" geometry="height: 40; width: 20" material=""></a-plane>
+        <a-plane src="#wht_wall" position="-55.23658 16.605 -305.56989" rotation="0 183.47 0" geometry="height: 40; width: 33" material=""></a-plane>
+        
+        
+        <a-obj-model src="#pier_frame_o" mtl="#pier_frame_m" position="-25.39616 7.06319 -306.38861" scale="0.05 0.05 0.05" rotation="0 90 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#pier_frame_o" mtl="#pier_frame_m" position="-37.70492 7.063 -306.43482" scale="0.05 0.05 0.05" rotation="0 91.18 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#pier_frame_o" mtl="#pier_frame_m" position="-50.39135 7 -305.97464" scale="0.05 0.05 0.05" rotation="0 94 0" material="" obj-model=""></a-obj-model>
+        <a-obj-model src="#pier_frame_o" mtl="#pier_frame_m" position="-62.70095 7 -305.05375" scale="0.05 0.05 0.05" rotation="0 94 0" material="" obj-model=""></a-obj-model>
+        
+    
+        <a-obj-model src="#Korean_flag_o" mtl="#Korean_flag_m" position="-68.63935 8.035 -302.23811" scale="45 45 45" rotation="-70 0 0" material="" obj-model=""></a-obj-model>
+        
+        <a-image src="#trigram_sky" position="-25.42502 8 -306.73283" rotation="" scale="" material="" geometry="height: 10.8; width: 8.3"></a-image>
+        <a-image src="#trigram_earth" position="-37.90192 7.7688 -306.73283" rotation="0 1.18 0" scale="" material="" geometry="height: 10.8; width: 8.3"></a-image>
+        <a-image src="#trigram_water" position="-50.64271 7.77827 -306.33009" rotation="0 4 0" scale="" material="" geometry="height: 10.8; width: 8.3"></a-image>
+        <a-image src="#trigram_fire" position="-62.79148 7.7685 -305.41258" rotation="0 4 0" scale="" material="" geometry="height: 10.8; width: 8.3"></a-image>
+        
+        <a-entity text="value: Title: Guun (Sky); alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="-26.7365 0.99103 -307.77068" scale="5 5 5" rotation="0 180 0"></a-entity>
+        <a-entity text="value: Title: Gon (Earth); alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="-40.20371 0.74155 -307.16776" scale="10 10 10" rotation="0 180 0"></a-entity>
+        <a-entity text="value: Title: Gaam (Water); alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="-52.58722 0.74155 -306.46587" scale="10 10 10" rotation="0 184 0"></a-entity>
+        <a-entity text="value: Title: Ri (Fire); alphaTest: 5; wrapCount: 23; color: #ccee20; tabSize: 4.01" position="-65.45869 0.74155 -305.47963" scale="10 10 10" rotation="0 184 0"></a-entity>    
+    
+    <!-- water -->
+        <a-obj-model src="#water_o" mtl="#water_m" position="2.8352 -18.487 -385.72671" scale="26.41 7 8" rotation="" material="" obj-model=""></a-obj-model>
+        
+        <a-obj-model src="#LibertyStatue_o" mtl="#LibertyStatue_m" position="-33.01275 -12.35481 -423.43244" scale="0.5 0.5 0.5" rotation="" material="" obj-model=""></a-obj-model>
+        
+        <a-entity position="-33.01275 -10 -423.43244" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+            <a-obj-model src="#StatenIslandFerry_o" mtl="#StatenIslandFerry_m" position="65 0 0" scale="0.005 0.005 0.005" rotation="-90 90 0" material="" obj-model="">
+            </a-obj-model>
+        </a-entity>
+        
+        
+        
+    </a-scene>
+        
+    </body>
+</html>    
