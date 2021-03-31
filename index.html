@@ -52,7 +52,9 @@
             
             <img id="oneway_r" src="img/one_way_right.png">
             
-            <img id="control" src="img/control_map.png">    
+            <img id="control" src="img/control_map.png"> 
+            
+            <img id="portal_plane" src="img/plane737.jpg"> 
             
         </a-assets>    
                     
@@ -74,9 +76,17 @@
         <!-- bridge -->
         <a-obj-model src="#brdg_o" mtl="#brdg_m" position="-2.4 -20 -10" scale="5 10 15" rotation="0 90 0"></a-obj-model>
         <!-- instructions -->
-        <a-image src="#control" position="5 4 20" rotation="" scale="3 3 3" material="" geometry="width: 2"></a-image>
-        <a-entity text="value: Use the keyboard to move W- Forward S- Backwards A- Left D- Right; align: center; alphaTest: 5; wrapCount: 20.94; color: #ffffff" scale="3 3 3" rotation="" position="3.8102 1.88365 20"></a-entity>
-        <a-entity text="value: Use the mouse to change view Click &amp; drag; align: center; alphaTest: 5; wrapCount: 24.5; color: #ffffff" scale="3 3 3" rotation="" position="7.31296 1.88365 20"></a-entity>
+        <a-image src="#control" position="3.27177 4 18" rotation="" scale="3 3 3" material="" geometry="width: 2"></a-image>
+        <a-entity text="value: Use the keyboard to move W- Forward S- Backwards A- Left D- Right; align: center; alphaTest: 5; wrapCount: 20.94; color: #ffffff" scale="3 3 3" rotation="" position="2.05685 1.88365 18"></a-entity>
+        <a-entity text="value: Use the mouse to change view Click &amp; drag; align: center; alphaTest: 5; wrapCount: 24.5; color: #ffffff" scale="3 3 3" rotation="" position="5.48093 1.88365 18"></a-entity>
+        <a-circle color="red" radius="1" position="8.8012 4 18" material="" geometry=""></a-circle>
+        <a-circle color="white" radius="1.5" position="8.8012 4 17.96" material="color: #ffffff" geometry="radius: 1.2"></a-circle>
+            
+            
+            
+       
+        <a-entity text="value: If you see this red circle, they are a portal that will take you to the next area. put your center cursor indicator (the black circle) on top of it and click.; align: center; alphaTest: 5; wrapCount: 22; color: #ffffff" scale="3 3 3" rotation="" position="8.82028 1.88365 18"></a-entity>
+            
         
         <a-plane src="#memory1" position="-25.41811 22.919 35.90739" rotation="0 120 0" geometry="height: 50; width: 40" material=""></a-plane>
         <a-plane src="#memory2" position="4.49754 22.91871 53.09007" rotation="0 180 0" geometry="height: 50; width: 40" material=""></a-plane>
@@ -160,7 +170,7 @@
         <a-obj-model src="#a380_o" mtl="#a380_m" position="-17 -2.40966 -25" scale="0.05 0.05 0.05" rotation="-90 0 0" material="" obj-model=""></a-obj-model>
         
         <!-- portal -->
-        <a-link href="airplane.html" title="Flight_to_NY" image="#" geometry="primitive: circle; segments: 64" material="shader: portal; backgroundColor: #ffffff; strokeColor: #000000" link="titleColor: #000000" rotation="-17.59 0 0" position="5.125 2.15236 -18.00753" scale="0.84 1.48 1"><a-entity text="color: white; align: center; font: kelsonsans; value: Flight_to_NY; width: 4" position="0 1.5 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; side: back" visible="false"></a-entity></a-link>
+        <a-link href="airplane.html" title="Flight_to_NY" image="#portal_plane" geometry="primitive: circle; segments: 64" material="shader: portal; backgroundColor: #ffffff; strokeColor: #000000" link="titleColor: #000000" rotation="-17.59 0 0" position="5.125 2.15236 -18.00753" scale="0.84 1.48 1"><a-entity text="color: white; align: center; font: kelsonsans; value: Flight_to_NY; width: 4" position="0 1.5 0"></a-entity><a-entity geometry="primitive: sphere; segmentsWidth: 64; segmentsHeight: 64; phiLength: 180; thetaLength: 360" material="shader: portal; borderEnabled: 0; side: back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive: sphere; radius: 10; segmentsWidth: 64; segmentsHeight: 64" material="shader: portal; borderEnabled: 0; side: back" visible="false"></a-entity></a-link>
 
                  
                             

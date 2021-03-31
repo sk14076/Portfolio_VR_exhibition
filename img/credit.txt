@@ -61,3 +61,5 @@ platform: https://media.npr.org/assets/img/2018/09/09/ap_18252019345433-0158927a
 pier sky: https://www.freepik.com/free-photo/panoramic-view-sea_854659.htm#page=1&query=Panoramic%20sea&position=1
 
 pier portal image: https://i.pinimg.com/originals/51/96/50/51965000593f36e50d2b6dbbb2d334fd.jpg
+
+plane 737: https://s30121.pcdn.co/wp-content/uploads/2019/06/Boeing-737-MAX-Safety.jpg
